@@ -23,8 +23,8 @@ class Card {
         void printCard();
 
     private:
-        int value;
-        Suit suit;
+        int _value;
+        Suit _suit;
 
 };
 

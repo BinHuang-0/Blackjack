@@ -1,13 +1,13 @@
 #include "card.h"
 
 Card::Card() {
-    this->value = 0;
-    this->suit = DIAMOND;
+    this->_value = 0;
+    this->_suit = DIAMOND;
 }
 
 Card::Card(int value, Suit suit) {
-    this->value = value;
-    this->suit = suit;
+    this->_value = value;
+    this->_suit = suit;
 }
 
 Card::~Card() {
@@ -15,37 +15,37 @@ Card::~Card() {
 }
 
 int Card::getValue() {
-    return this->value;
+    return this->_value;
 }
 
 Suit Card::getSuit() {
-    return this->suit;
+    return this->_suit;
 }
 
 void Card::printCard() {
     string printValue = "";
 
-    switch(this->value) {
+    switch(this->_value) {
         case 1:
             printValue.append("Ace");
             break;
-        case 10:
+        case 11:
             printValue.append("Jack");
             break;
-        case 11:
+        case 12:
             printValue.append("Queen");
             break;
-        case 12:
+        case 13:
             printValue.append("King");
             break;
         default:
-            printValue.append(to_string(this->value));
+            printValue.append(to_string(this->_value));
             break;
     }
 
     printValue.append(" of ");
 
-    switch(this->suit) {
+    switch(this->_suit) {
         case DIAMOND:
             printValue.append("Diamonds");
             break;
