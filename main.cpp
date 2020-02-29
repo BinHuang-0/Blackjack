@@ -1,9 +1,12 @@
 #include "card.h"
+#include "deck.h"
+#include "blackjack.h"
 
 int main(int argc, char* argv[]) {
-    Card card = Card(1, SPADE);
+    srand(time(NULL));
 
-    card.printCard();
+    Blackjack blackjack = Blackjack();
+    blackjack.startGame();
 
     return 0;
 }
