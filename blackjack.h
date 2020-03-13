@@ -11,9 +11,7 @@ class Blackjack {
 
     private:
         Deck _deck;
-        int _dealerScore;
         int _playerChips;
-        int _playerScore;
 
         int _playRound();
 };
